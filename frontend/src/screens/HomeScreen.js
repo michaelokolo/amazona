@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 // import data from '../data';
 import { useEffect, useReducer } from 'react';
 import axios from 'axios';
@@ -52,7 +51,7 @@ function HomeScreen() {
         ) : (
           <Row>
             {products.map((product) => (
-              <Col sm={6} md={4} lg={3} className="mb-3">
+              <Col key={product.slug} sm={6} md={4} lg={3} className="mb-3">
                 <Product product={product}></Product>
               </Col>
             ))}
